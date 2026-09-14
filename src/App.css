@@ -1,0 +1,71 @@
+.main-content {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+}
+
+/* Color Variables */
+:root {
+  --primary-dark: #1a1a1a;
+  --primary-orange: #ff6b35;
+  --primary-orange-dark: #e55a2a;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666;
+  --text-light: #999;
+  --bg-light: #f8f8f8;
+  --bg-white: #ffffff;
+  --border-color: #e5e5e5;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container-sm {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section Spacing */
+.section {
+  padding: 80px 0;
+  width: 100%;
+}
+
+.section-light {
+  background-color: var(--bg-light);
+}
+
+.section-dark {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 70px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+}
