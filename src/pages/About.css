@@ -4,7 +4,7 @@
 
 /* About Hero */
 .about-hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  background-color: #00050d;
   color: white;
   padding: 100px 0;
   text-align: center;
@@ -16,41 +16,53 @@
   justify-content: center;
 }
 
-.about-hero h1 {
-  font-size: 3.5rem;
+.eyebrow {
+  display: inline-block;
+  color: #00daff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   margin-bottom: 1rem;
+}
+
+.about-hero h1 {
+  font-size: 3.25rem;
+  margin-bottom: 1.5rem;
   color: white;
 }
 
 .about-hero p {
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.7);
   max-width: 700px;
   margin: 0 auto;
+  line-height: 1.7;
 }
 
 /* Mission Content */
 .mission-content {
-  text-align: center;
+  text-align: left;
 }
 
 .mission-text h2 {
   margin-bottom: 2rem;
-  color: #1a1a1a;
+  color: #ffffff;
 }
 
 .mission-text p {
   font-size: 1.05rem;
-  color: #666;
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.8;
   margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 /* Approach Grid */
 .approach-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
 .approach-item {
@@ -61,19 +73,19 @@
 .approach-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ff6b35;
+  color: #00daff;
   margin-bottom: 1rem;
   display: block;
 }
 
 .approach-item h3 {
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
 
 .approach-item p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -81,48 +93,32 @@
 /* Technical Grid */
 .technical-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
 }
 
 .technical-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
   padding: 2rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: #0a0f1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-.technical-card:nth-child(2) {
-  grid-template-columns: 1fr 1fr;
+.technical-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 218, 255, 0.4);
 }
 
-.technical-card:nth-child(2) .technical-image {
-  order: 2;
-}
-
-.technical-card:nth-child(2) .technical-text {
-  order: 1;
-}
-
-.technical-image {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.technical-text h3 {
-  color: #1a1a1a;
+.technical-card h3 {
+  color: #ffffff;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  text-transform: lowercase;
 }
 
-.technical-text p {
-  color: #666;
+.technical-card p {
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.95rem;
   line-height: 1.7;
 }
@@ -141,27 +137,28 @@
 }
 
 .checkmark {
-  font-size: 1.5rem;
-  color: #ff6b35;
+  font-size: 1.2rem;
+  color: #00daff;
   font-weight: 700;
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 107, 53, 0.1);
+  background: rgba(0, 218, 255, 0.1);
+  border: 1px solid rgba(0, 218, 255, 0.3);
   border-radius: 50%;
   flex-shrink: 0;
 }
 
 .commitment-item h3 {
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
 
 .commitment-item p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
@@ -169,45 +166,51 @@
 
 /* CTA Section (reuse from homepage) */
 .cta-section {
-  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  background-color: #0a0f1a;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: white;
   text-align: center;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .cta-section h2 {
   color: white;
-  margin-bottom: 1.5rem;
-  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
+  text-transform: lowercase;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-section p {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
 .cta-button {
-  background-color: #ff6b35;
-  color: white;
-  padding: 1.2rem 3rem;
-  border-radius: 8px;
+  background-color: #00daff;
+  color: #00050d;
+  padding: 1rem 2.75rem;
+  border-radius: 0;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  text-transform: lowercase;
 }
 
 .cta-button:hover {
-  background-color: #e55a2a;
+  background-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
 }
 
 /* Footer (reuse from homepage) */
 .footer {
-  background-color: #1a1a1a;
+  background-color: #00050d;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: white;
   padding: 60px 0 30px;
 }
@@ -246,11 +249,11 @@
 }
 
 .footer-section a:hover {
-  color: #ff6b35;
+  color: #00daff;
 }
 
 .contact-email {
-  color: #ff6b35 !important;
+  color: #00daff !important;
   font-weight: 600;
 }
 
@@ -270,18 +273,6 @@
 
   .about-hero p {
     font-size: 1.1rem;
-  }
-
-  .technical-card {
-    grid-template-columns: 1fr !important;
-  }
-
-  .technical-card:nth-child(2) .technical-image {
-    order: 0;
-  }
-
-  .technical-card:nth-child(2) .technical-text {
-    order: 0;
   }
 
   .cta-section h2 {

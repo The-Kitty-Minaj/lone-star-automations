@@ -6,15 +6,15 @@
 
 /* Color Variables */
 :root {
-  --primary-dark: #1a1a1a;
-  --primary-orange: #ff6b35;
-  --primary-orange-dark: #e55a2a;
-  --text-primary: #1a1a1a;
-  --text-secondary: #666;
-  --text-light: #999;
-  --bg-light: #f8f8f8;
-  --bg-white: #ffffff;
-  --border-color: #e5e5e5;
+  --primary-dark: #00050d;
+  --primary-orange: #00daff;
+  --primary-orange-dark: #00b8d9;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-light: rgba(255, 255, 255, 0.5);
+  --bg-light: #0f1626;
+  --bg-white: #0a0f1a;
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Container */
@@ -38,6 +38,8 @@
 
 .section-light {
   background-color: var(--bg-light);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .section-dark {

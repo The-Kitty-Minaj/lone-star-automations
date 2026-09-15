@@ -7,24 +7,48 @@ function About() {
       {/* Hero Section */}
       <section className="about-hero">
         <div className="container">
-          <h1>About Lone Star Automations</h1>
-          <p>We transform businesses by automating what matters and freeing teams to focus on strategy.</p>
+          <span className="eyebrow">Our Mission</span>
+          <h1>Streamline. Integrate. Elevate.</h1>
+          <p>
+            At Lone Star Automation we bridge the gap between complex software ecosystems and
+            seamless operational flow. Our expertise in API architecture and custom integrations
+            allows businesses to move faster and unlock the full potential of their digital tools.
+          </p>
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Why Choose Us Section */}
       <section className="section">
         <div className="container-sm">
           <div className="mission-content">
             <div className="mission-text">
-              <h2>Our Mission</h2>
+              <h2>Why Choose Us?</h2>
               <p>
-                At Lone Star Automations, we believe that the best businesses are built on efficiency, not just hustle. 
-                We help companies eliminate manual, repetitive work through custom automation solutions that scale.
+                We bridge the gap between technical complexity and operational excellence, delivering
+                reliable automation and API-driven solutions tailored for SMB growth.
               </p>
               <p>
-                Our approach is consultative, transparent, and deeply technical. We don't believe in one-size-fits-all 
-                solutions. Every business is unique, and so is every automation we build.
+                We are a small, dedicated team committed to delivering on our promises and creating
+                real, measurable value for our clients. Our mission is simple: remove the obstacles
+                that slow your business down so you and your team can focus on what matters most.
+              </p>
+              <p>
+                We understand that manual, repetitive tasks don't just waste time — they impact
+                productivity, increase the risk of errors, and take away from overall job
+                satisfaction, especially during high-pressure moments when your attention is needed
+                elsewhere.
+              </p>
+              <p>
+                We're not here to change how you run your business or push new software onto your
+                team. Instead, we focus on the tools you already use. Our approach is to connect
+                your existing systems and automate the workflows between them, reducing manual
+                effort and eliminating the inefficiencies that hold you back.
+              </p>
+              <p>
+                We value honesty and transparency in everything we do. Before any work begins, we
+                take the time to understand your current setup and map out a clear, visual
+                representation of the proposed integration. We walk you through exactly how it
+                works, what it solves, and the value it will deliver.
               </p>
             </div>
           </div>
@@ -64,39 +88,36 @@ function About() {
       <section className="section">
         <div className="container">
           <div className="section-header">
-            <h2>Technical Mastery</h2>
-            <p>Deep expertise in the tools and platforms that power modern automation</p>
+            <h2>Technical Mastery.</h2>
+            <p>
+              We architect resilient digital ecosystems by bridging the gap between disparate
+              platforms through custom-built API solutions and intelligent workflow design.
+            </p>
           </div>
 
           <div className="technical-grid">
             <div className="technical-card">
-              <img 
-                src="https://www.openart.ai/creation/gfMHBCsEAocEKCrn8Jkb" 
-                alt="API Architecture"
-                className="technical-image"
-              />
-              <div className="technical-text">
-                <h3>API Architecture</h3>
-                <p>
-                  We design robust, scalable API integrations that connect your systems seamlessly. 
-                  From REST to webhooks, we handle the complexity so your systems work together effortlessly.
-                </p>
-              </div>
+              <h3>API Architecture</h3>
+              <p>
+                Engineered for high-volume data exchange and seamless connectivity across SaaS
+                platforms with zero latency.
+              </p>
             </div>
 
             <div className="technical-card">
-              <img 
-                src="https://www.openart.ai/creation/2ESf6jZRLZYR4L732LRN" 
-                alt="Workflow Logic"
-                className="technical-image"
-              />
-              <div className="technical-text">
-                <h3>Workflow Logic</h3>
-                <p>
-                  Complex workflows require sophisticated logic. We build conditional automation, error handling, 
-                  and optimization that ensures every process runs perfectly, every time.
-                </p>
-              </div>
+              <h3>Workflow Logic</h3>
+              <p>
+                Mapping complex business operations into automated sequences that eliminate human
+                error and scale with your growth.
+              </p>
+            </div>
+
+            <div className="technical-card">
+              <h3>Data Ecosystem</h3>
+              <p>
+                Identifying inefficiencies in your stack to build a synchronized data layer that
+                informs better business decisions.
+              </p>
             </div>
           </div>
         </div>
@@ -142,9 +163,8 @@ function About() {
       {/* CTA Section */}
       <section className="section cta-section">
         <div className="container-sm">
-          <h2>Ready to Work With Us?</h2>
-          <p>Let's talk about what automation can do for your business.</p>
-          <button className="cta-button">Schedule Your Discovery Call</button>
+          <h2>ready to optimize? let's build your workflow ecosystem.</h2>
+          <button className="cta-button">consult a specialist</button>
         </div>
       </section>
 
@@ -153,8 +173,8 @@ function About() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-section">
-              <h4>Lone Star Automations</h4>
-              <p>Custom API automation and systems integration for e-commerce and hospitality businesses.</p>
+              <h4>Lone Star Automation</h4>
+              <p>Automation consulting and systems integration for businesses that want to connect the software they already rely on.</p>
             </div>
 
             <div className="footer-section">
@@ -162,19 +182,19 @@ function About() {
               <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
-                <li><a href="/">Services</a></li>
               </ul>
             </div>
 
             <div className="footer-section">
               <h4>Get in Touch</h4>
-              <p>Have questions? We'd love to hear from you.</p>
-              <p className="contact-email">hello@lonestarautomations.com</p>
+              <p className="contact-email">hello@lonestarautomation.com</p>
+              <p>(972) 850-8623</p>
+              <p>Headquarters: Building Zero<br />Mission Bay, San Francisco</p>
             </div>
           </div>
 
           <div className="footer-bottom">
-            <p>&copy; 2026 Lone Star Automations. All rights reserved.</p>
+            <p>&copy; 2026 Lone Star Automation. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,51 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import heroGraphic from '../assets/hero-graphic.png';
 import './Homepage.css';
 
 function Homepage() {
   const processSteps = [
     {
       title: 'Discovery & Diagnosis',
-      description: 'We start with a deep dive into your current workflows. Understanding your pain points, data flows, and system constraints is essential to designing the right solution.',
-      image: 'https://www.openart.ai/creation/hfFsD8bzh6su1kd0WKM2'
+      description: 'We start by understanding how your business operates today. During the discovery phase, we review your current workflows, identify manual processes, and evaluate the software tools your team relies on. This allows us to clearly define where automation can have the greatest impact.'
     },
     {
       title: 'Identify Pain Points',
-      description: 'Through careful analysis, we pinpoint exactly where manual processes are costing you time and money. Every bottleneck is a candidate for automation.',
-      image: 'https://www.openart.ai/creation/XD2jH5VlqinR9thLX0ZX'
+      description: 'Next, we work with you to pinpoint the specific bottlenecks slowing your operations down. Whether it’s duplicate data entry, disconnected systems, reporting challenges, or inefficient processes, we map out where time is being lost and where integration can create immediate value.'
     },
     {
       title: 'Custom Integration Design',
-      description: 'We architect a tailored solution using Zapier, APIs, and custom logic. Every connection is built for reliability, security, and scalability from day one.',
-      image: 'https://www.openart.ai/creation/khKkK7rKNmTB89DZ6KEx'
+      description: 'Once the opportunity is clear, we design a tailored automation solution based on your existing software stack. Instead of forcing new tools into your workflow, we build integrations that connect the systems you already use through APIs and automation platforms, creating a seamless flow of data between them.'
     },
     {
       title: 'Testing & Implementation',
-      description: 'Rigorous testing ensures every automation runs flawlessly. We handle the full implementation, training, and optimization to make sure your team is set up for success.',
-      image: 'https://www.openart.ai/creation/zUjkSeIwC48nht6TD5Lb'
+      description: 'Before any payment is required, we implement and test the integration in a controlled environment using sample or test data. This allows you to review the workflow, confirm it solves the problem, and ensure everything functions as expected before moving into production use.'
     }
   ];
 
   const benefits = [
     {
       title: 'Reduce Manual Work',
-      description: 'Eliminate repetitive tasks that drain your team\'s time and energy. Automate the work, focus on strategy.',
-      image: 'https://www.openart.ai/creation/QsUvKRjovqiGtqJcoE94'
+      description: 'Minimise repetitive human tasks and liberate your team to focus on high-impact strategic initiatives.'
     },
     {
       title: 'Zero Error Rate',
-      description: 'Machines don\'t get tired. Automated systems execute the same task perfectly, every single time, reducing costly mistakes.',
-      image: 'https://www.openart.ai/creation/KgVf5w1PmFUQiBsHlDqe'
+      description: 'Eliminate data silos and manual entry errors with precise, reliable API-driven synchronization.'
     },
     {
       title: 'Total Visibility',
-      description: 'Real-time dashboards and reporting give you complete visibility into your operations. Data flows exactly where you need it.',
-      image: 'https://www.openart.ai/creation/PHQu6phAl9Uu5u2bE9ZA'
+      description: 'Gain a single source of truth across all tools with synchronized real-time dashboards and reporting.'
     },
     {
       title: 'Scalable Architecture',
-      description: 'Your automation grows with your business. As volume increases, the system scales seamlessly without breaking or slowing down.',
-      image: 'https://www.openart.ai/creation/QxLah1bAp92IiaGIbrsI'
+      description: 'Reliable low-code frameworks that integrate naturally and scale alongside your business growth.'
     }
   ];
 
@@ -72,30 +65,24 @@ function Homepage() {
     <div className="homepage">
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-video-wrapper">
-          <video 
-            className="hero-video"
-            autoPlay 
-            muted 
-            loop
-            playsInline
-          >
-            <source 
-              src="https://www.openart.ai/creation/2OJENkEWxdR9cvDSCFwX" 
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-          <div className="hero-overlay"></div>
-        </div>
+        <div className="hero-overlay"></div>
 
         <div className="hero-content">
-          <div className="container">
-            <h1 className="hero-title">Stop Wasting Time on Manual Processes</h1>
-            <p className="hero-subtitle">
-              Custom API automation solutions that scale with your business
-            </p>
-            <a href="#contact" className="hero-cta">Schedule Free Discovery Call</a>
+          <div className="container hero-grid">
+            <div className="hero-text">
+              <h1 className="hero-title">bespoke consulting.<br />expert integration.</h1>
+              <p className="hero-subtitle">
+                Lone Star Automation is an automation consulting and systems integration firm
+                that helps businesses connect the software they already rely on every day. We
+                work directly with you to understand your workflow challenges, evaluate your
+                current software stack, and design API-driven automations that eliminate manual
+                work and improve operational efficiency.
+              </p>
+              <a href="#contact" className="hero-cta">consult a specialist</a>
+            </div>
+            <div className="hero-graphic-wrapper">
+              <img src={heroGraphic} alt="Lone Star Automation network graphic" className="hero-graphic" />
+            </div>
           </div>
         </div>
       </section>
@@ -104,17 +91,13 @@ function Homepage() {
       <section className="section section-light">
         <div className="container">
           <div className="section-header">
-            <h2>How We Work</h2>
-            <p>A proven methodology designed to transform your workflows</p>
+            <h2>Our Process</h2>
           </div>
 
           <div className="process-grid">
             {processSteps.map((step, index) => (
               <div key={index} className="process-card">
-                <div className="card-image-wrapper">
-                  <img src={step.image} alt={step.title} className="card-image" />
-                  <span className="card-number">{index + 1}</span>
-                </div>
+                <span className="card-number">{index + 1}</span>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
               </div>
@@ -127,16 +110,13 @@ function Homepage() {
       <section className="section">
         <div className="container">
           <div className="section-header">
-            <h2>Why Choose Lone Star?</h2>
-            <p>What sets us apart from the rest</p>
+            <h2>Why Choose Us?</h2>
+            <p>We bridge the gap between technical complexity and operational excellence, delivering reliable automation and API-driven solutions tailored for SMB growth.</p>
           </div>
 
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (
               <div key={index} className="benefit-card">
-                <div className="card-image-wrapper">
-                  <img src={benefit.image} alt={benefit.title} className="card-image" />
-                </div>
                 <h3>{benefit.title}</h3>
                 <p>{benefit.description}</p>
               </div>
@@ -168,9 +148,8 @@ function Homepage() {
       {/* CTA Section */}
       <section className="section cta-section" id="contact">
         <div className="container-sm">
-          <h2>Ready to Transform Your Workflow?</h2>
-          <p>Schedule a free discovery call with our team and let's talk about your automation challenges.</p>
-          <button className="cta-button">Schedule Your Free Discovery Call</button>
+          <h2>ready to optimize? let's build your workflow ecosystem.</h2>
+          <button className="cta-button">consult a specialist</button>
         </div>
       </section>
 
@@ -179,8 +158,8 @@ function Homepage() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-section">
-              <h4>Lone Star Automations</h4>
-              <p>Custom API automation and systems integration for e-commerce and hospitality businesses.</p>
+              <h4>Lone Star Automation</h4>
+              <p>Automation consulting and systems integration for businesses that want to connect the software they already rely on.</p>
             </div>
 
             <div className="footer-section">
@@ -188,19 +167,19 @@ function Homepage() {
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
-                <li><a href="#services">Services</a></li>
               </ul>
             </div>
 
             <div className="footer-section">
               <h4>Get in Touch</h4>
-              <p>Have questions? We'd love to hear from you.</p>
-              <p className="contact-email">hello@lonestarautomations.com</p>
+              <p className="contact-email">hello@lonestarautomation.com</p>
+              <p>(972) 850-8623</p>
+              <p>Headquarters: Building Zero<br />Mission Bay, San Francisco</p>
             </div>
           </div>
 
           <div className="footer-bottom">
-            <p>&copy; 2026 Lone Star Automations. All rights reserved.</p>
+            <p>&copy; 2026 Lone Star Automation. All rights reserved.</p>
           </div>
         </div>
       </footer>
