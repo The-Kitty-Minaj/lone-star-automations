@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import heroGraphic from '../assets/hero-graphic.png';
 import './Homepage.css';
 
 function Homepage() {
+  const [showContactPopup, setShowContactPopup] = useState(false);
+
   const processSteps = [
     {
       title: 'Discovery & Diagnosis',
@@ -70,15 +72,13 @@ function Homepage() {
         <div className="hero-content">
           <div className="container hero-grid">
             <div className="hero-text">
-              <h1 className="hero-title">bespoke consulting.<br />expert integration.</h1>
+              <h1 className="hero-title">Stop Wasting Time on Manual Processes</h1>
               <p className="hero-subtitle">
-                Lone Star Automation is an automation consulting and systems integration firm
-                that helps businesses connect the software they already rely on every day. We
-                work directly with you to understand your workflow challenges, evaluate your
-                current software stack, and design API-driven automations that eliminate manual
-                work and improve operational efficiency.
+                Customized automation solutions to reduce manual tasks and streamline workflows
               </p>
-              <a href="#contact" className="hero-cta">consult a specialist</a>
+              <button className="hero-cta" onClick={() => setShowContactPopup(true)}>
+                Schedule Your Free Discovery Call
+              </button>
             </div>
             <div className="hero-graphic-wrapper">
               <img src={heroGraphic} alt="Lone Star Automation network graphic" className="hero-graphic" />
@@ -183,6 +183,36 @@ function Homepage() {
           </div>
         </div>
       </footer>
+
+      {/* Contact Popup Modal */}
+      {showContactPopup && (
+        <div className="popup-overlay" onClick={() => setShowContactPopup(false)}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button className="popup-close" onClick={() => setShowContactPopup(false)}>×</button>
+
+            <h2>Get In Touch</h2>
+            <p>Choose your preferred way to reach us:</p>
+
+            <div className="contact-options">
+              <div className="contact-option phone-option">
+                <h3>Call or Text</h3>
+                <p className="contact-detail">409-294-3897</p>
+                <p className="contact-instruction">Call us directly or send a text with your preferred date and time</p>
+              </div>
+
+              <div className="contact-option email-option">
+                <h3>Email</h3>
+                <a href="mailto:michael.jella@icloud.com" className="email-link">
+                  michael.jella@icloud.com
+                </a>
+                <p className="contact-instruction">Click to open your email and send us your availability</p>
+              </div>
+            </div>
+
+            <p className="popup-footer">We'll get back to you within 24 hours with available times for your discovery call.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
