@@ -8,20 +8,24 @@ function Homepage() {
 
   const processSteps = [
     {
-      title: 'Discovery & Diagnosis',
-      description: 'We start by understanding how your business operates today. During the discovery phase, we review your current workflows, identify manual processes, and evaluate the software tools your team relies on. This allows us to clearly define where automation can have the greatest impact.'
+      title: 'Discovery',
+      description: 'Free discovery calls to understand your systems and pain points.',
+      hoverText: "We dig in to see what you're working with and what's causing you headaches."
     },
     {
-      title: 'Identify Pain Points',
-      description: 'Next, we work with you to pinpoint the specific bottlenecks slowing your operations down. Whether it’s duplicate data entry, disconnected systems, reporting challenges, or inefficient processes, we map out where time is being lost and where integration can create immediate value.'
+      title: 'Research & Design',
+      description: 'We research your setup and map out your custom workflow solution.',
+      hoverText: "You'll see exactly how the automation will work before any payment is required."
     },
     {
-      title: 'Custom Integration Design',
-      description: 'Once the opportunity is clear, we design a tailored automation solution based on your existing software stack. Instead of forcing new tools into your workflow, we build integrations that connect the systems you already use through APIs and automation platforms, creating a seamless flow of data between them.'
+      title: 'Quote & Build',
+      description: 'Transparent pricing, then we build your integration completely hands-off.',
+      hoverText: '20 percent deposit gets us started, and we handle the entire build for you.'
     },
     {
-      title: 'Testing & Implementation',
-      description: 'Before any payment is required, we implement and test the integration in a controlled environment using sample or test data. This allows you to review the workflow, confirm it solves the problem, and ensure everything functions as expected before moving into production use.'
+      title: 'Implementation & Warranty',
+      description: 'We launch your workflow and guarantee it works for 6 months.',
+      hoverText: 'Any fixes or tweaks needed are on us at no additional cost.'
     }
   ];
 
@@ -99,7 +103,8 @@ function Homepage() {
               <div key={index} className="process-card">
                 <span className="card-number">{index + 1}</span>
                 <h3>{step.title}</h3>
-                <p>{step.description}</p>
+                <p className="step-description">{step.description}</p>
+                <div className="step-hover-tooltip">{step.hoverText}</div>
               </div>
             ))}
           </div>
