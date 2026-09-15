@@ -1,161 +1,149 @@
 import React from 'react';
 import './About.css';
 
+const howWeWork = [
+  {
+    number: '1',
+    title: 'Discovery (Free)',
+    description: "One to two complimentary discovery calls. We dig into your systems, your current pain points, and what an ideal workflow would look like for your business. Zero commitment, zero cost — this is about making sure we understand what you actually need."
+  },
+  {
+    number: '2',
+    title: 'Research & Design (Free)',
+    description: 'We go behind the scenes and research your setup in detail. We map out a custom workflow diagram showing exactly how the automation will work. We identify any obstacles and verify that the solution is actually possible. We present the plan back to you — still free, still no obligation.'
+  },
+  {
+    number: '3',
+    title: 'Quote & Build (Paid)',
+    description: 'Once you approve the design, we present a transparent quote. 20% deposit to get started, remainder due on completion. We handle the entire build and setup — completely hands-off for you.'
+  },
+  {
+    number: '4',
+    title: 'Implementation & Warranty (6 Months)',
+    description: "We implement the workflow in your live environment. We guarantee it works as designed for 6 months. If anything breaks or needs tweaking, we fix it at no additional cost. Your satisfaction is the only success metric that matters."
+  }
+];
+
+const focusAreas = [
+  {
+    title: 'Custom Integration',
+    description: 'We connect your systems using APIs, webhooks, and custom workflows. Shopify to accounting. E-commerce platforms to inventory management. CRM to fulfillment. Whatever needs to talk to whatever — we build the bridge and make the data flow automatically.'
+  },
+  {
+    title: 'Workflow Automation',
+    description: "We eliminate manual work. Manual data entry, manual calculations, manual status updates — all of it can be automated. We identify the pain points in your process and build workflows that handle them automatically, accurately, and without you having to lift a finger."
+  },
+  {
+    title: 'Scalable Solutions',
+    description: "Your automation grows with you. We don't build quick fixes. We build systems that handle your current volume and scale when you do. From 10 orders a day to 10,000 — your workflow stays rock solid."
+  }
+];
+
+const commitments = [
+  {
+    title: 'Risk-Free Engagement',
+    description: "No payment until your workflow is approved and working. The discovery calls are free. The research is free. The workflow diagram is free. You only pay when you've seen the plan and decided to move forward. That means zero risk on your part for finding out if we can help."
+  },
+  {
+    title: 'Hands-Off Implementation',
+    description: "You don't have to understand the technical details. We handle the research, the build, the testing, and the deployment. You approve the plan, we handle the rest. When it's ready, we implement it in your live environment and make sure it works."
+  },
+  {
+    title: '6-Month Guarantee',
+    description: "After launch, we stand behind our work with a 6-month warranty. If the workflow breaks, gets outdated, or doesn't meet your expectations, we fix it at no additional cost. Your satisfaction isn't a goal — it's a guarantee."
+  }
+];
+
 function About() {
   return (
     <div className="about-page">
-      {/* Hero Section */}
+      {/* Hero / Intro Section */}
       <section className="about-hero">
-        <div className="container">
-          <span className="eyebrow">Our Mission</span>
-          <h1>Streamline. Integrate. Elevate.</h1>
-          <p>
-            At Lone Star Automation we bridge the gap between complex software ecosystems and
-            seamless operational flow. Our expertise in API architecture and custom integrations
-            allows businesses to move faster and unlock the full potential of their digital tools.
-          </p>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="section">
         <div className="container-sm">
-          <div className="mission-content">
-            <div className="mission-text">
-              <h2>Why Choose Us?</h2>
-              <p>
-                We bridge the gap between technical complexity and operational excellence, delivering
-                reliable automation and API-driven solutions tailored for SMB growth.
-              </p>
-              <p>
-                We are a small, dedicated team committed to delivering on our promises and creating
-                real, measurable value for our clients. Our mission is simple: remove the obstacles
-                that slow your business down so you and your team can focus on what matters most.
-              </p>
-              <p>
-                We understand that manual, repetitive tasks don't just waste time — they impact
-                productivity, increase the risk of errors, and take away from overall job
-                satisfaction, especially during high-pressure moments when your attention is needed
-                elsewhere.
-              </p>
-              <p>
-                We're not here to change how you run your business or push new software onto your
-                team. Instead, we focus on the tools you already use. Our approach is to connect
-                your existing systems and automate the workflows between them, reducing manual
-                effort and eliminating the inefficiencies that hold you back.
-              </p>
-              <p>
-                We value honesty and transparency in everything we do. Before any work begins, we
-                take the time to understand your current setup and map out a clear, visual
-                representation of the proposed integration. We walk you through exactly how it
-                works, what it solves, and the value it will deliver.
-              </p>
-            </div>
+          <h1>About Lone Star Automation</h1>
+          <div className="about-intro-text">
+            <p>
+              Your business runs on multiple systems. Your e-commerce platform talks to one place.
+              Your accounting software lives somewhere else. Your inventory system is in another.
+              And somewhere in between, you or your team is manually pulling data, entering it by
+              hand, and crossing your fingers that nothing gets lost in translation. That's the
+              problem we solve.
+            </p>
+            <p>
+              Lone Star Automation specializes in custom API integrations and workflow automation.
+              We connect your disconnected systems, eliminate manual data entry, and build
+              workflows that run without you. No generic templates. No off-the-shelf solutions
+              that almost fit. We build exactly what your business needs — custom integrations
+              that sync your systems, reduce errors, and free up your team to focus on what
+              actually matters.
+            </p>
+            <p>
+              We're a small, focused team. We've spent years in hospitality and e-commerce. We
+              know the chaos of systems that don't talk to each other. And we don't move forward
+              until you're satisfied. No payment until your workflow is approved and running. No
+              surprises. Just straight-forward, honest work and a 6-month guarantee that backs it up.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Our Approach Section */}
+      {/* How We Work Section */}
       <section className="section section-light">
-        <div className="container-sm">
-          <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Our Approach</h2>
-          <div className="approach-grid">
-            <div className="approach-item">
-              <div className="approach-number">01</div>
-              <h3>Discovery First</h3>
-              <p>We spend time understanding your business, your challenges, and your goals. This isn't a check-the-box conversation.</p>
-            </div>
-            <div className="approach-item">
-              <div className="approach-number">02</div>
-              <h3>Transparent Quoting</h3>
-              <p>No surprises, no hidden costs. You'll know exactly what you're getting and what it costs before we start building.</p>
-            </div>
-            <div className="approach-item">
-              <div className="approach-number">03</div>
-              <h3>Custom Design</h3>
-              <p>Every automation is tailored to your specific workflows, systems, and requirements. Off-the-shelf doesn't cut it.</p>
-            </div>
-            <div className="approach-item">
-              <div className="approach-number">04</div>
-              <h3>Rigorous Testing</h3>
-              <p>We test every automation thoroughly before implementation. Your data and your reputation are on the line—we take that seriously.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Mastery Section */}
-      <section className="section">
         <div className="container">
           <div className="section-header">
-            <h2>Technical Mastery.</h2>
+            <h2>How We Work</h2>
             <p>
-              We architect resilient digital ecosystems by bridging the gap between disparate
-              platforms through custom-built API solutions and intelligent workflow design.
+              Every integration is unique. Every client has different systems, different pain
+              points, and different goals. That's why we start with discovery, not assumptions.
             </p>
           </div>
 
-          <div className="technical-grid">
-            <div className="technical-card">
-              <h3>API Architecture</h3>
-              <p>
-                Engineered for high-volume data exchange and seamless connectivity across SaaS
-                platforms with zero latency.
-              </p>
-            </div>
-
-            <div className="technical-card">
-              <h3>Workflow Logic</h3>
-              <p>
-                Mapping complex business operations into automated sequences that eliminate human
-                error and scale with your growth.
-              </p>
-            </div>
-
-            <div className="technical-card">
-              <h3>Data Ecosystem</h3>
-              <p>
-                Identifying inefficiencies in your stack to build a synchronized data layer that
-                informs better business decisions.
-              </p>
-            </div>
+          <div className="process-grid">
+            {howWeWork.map((step) => (
+              <div key={step.number} className="process-card">
+                <span className="card-number">{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Commitment Section */}
+      {/* Built on Specialization Section */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Built on Specialization</h2>
+            <p>We don't do everything. We do this one thing really well.</p>
+          </div>
+
+          <div className="technical-grid">
+            {focusAreas.map((area, index) => (
+              <div key={index} className="technical-card">
+                <h3>{area.title}</h3>
+                <p>{area.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Commitment Section */}
       <section className="section section-light">
-        <div className="container-sm">
-          <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Our Commitment</h2>
-          <div className="commitment-list">
-            <div className="commitment-item">
-              <span className="checkmark">✓</span>
-              <div>
-                <h3>Quality First</h3>
-                <p>We don't cut corners. Your automation is built to last and scale with your business.</p>
+        <div className="container">
+          <div className="section-header">
+            <h2>Our Commitment</h2>
+            <p>Here's what sets us apart.</p>
+          </div>
+
+          <div className="technical-grid">
+            {commitments.map((item, index) => (
+              <div key={index} className="technical-card">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </div>
-            </div>
-            <div className="commitment-item">
-              <span className="checkmark">✓</span>
-              <div>
-                <h3>Transparency Always</h3>
-                <p>Clear communication, realistic timelines, and honest feedback. You'll always know where you stand.</p>
-              </div>
-            </div>
-            <div className="commitment-item">
-              <span className="checkmark">✓</span>
-              <div>
-                <h3>Your Success Matters</h3>
-                <p>We're invested in your success. If your automation isn't working, we fix it.</p>
-              </div>
-            </div>
-            <div className="commitment-item">
-              <span className="checkmark">✓</span>
-              <div>
-                <h3>Continuous Improvement</h3>
-                <p>Technology evolves, and so do we. We stay on the cutting edge so you don't have to.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -163,8 +151,9 @@ function About() {
       {/* CTA Section */}
       <section className="section cta-section">
         <div className="container-sm">
-          <h2>ready to optimize? let's build your workflow ecosystem.</h2>
-          <button className="cta-button">consult a specialist</button>
+          <h2>ready to connect your systems?</h2>
+          <p>Start with a free discovery call. No commitment. No risk. Let's talk about what's possible.</p>
+          <button className="cta-button">schedule your free discovery call</button>
         </div>
       </section>
 
